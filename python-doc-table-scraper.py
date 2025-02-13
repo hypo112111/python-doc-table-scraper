@@ -28,21 +28,9 @@ def extract_table_from_published_doc(url):
 
     # Print tables
 
-    secret_text = {" "}
-
-    for i, table in enumerate(extracted_tables):
-        #print(table.iloc[0].values[1])
-        for row in range(len(table)):
-          secret_text[table.iloc[row].values[2]][table.iloc[row].values[0]] = table.iloc[row].values[1]
-
-    print(secret_text)
-
-    # Print tables
-    for i, table in enumerate(extracted_tables):
-        print(f"\nTable {i+1}:\n", table)
 
     return extracted_tables
 
 # Example usage
-doc_url = "https://docs.google.com/document/d/e/2PACX-1vRMx5YQlZNa3ra8dYYxmv-QIQ3YJe8tbI3kqcuC7lQiZm-CSEznKfN_HYNSpoXcZIV3Y_O3YoUB1ecq/pub"
+doc_url = "doc_url"
 tables = extract_table_from_published_doc(doc_url)
